@@ -1,0 +1,63 @@
+@use "../abstract/" as *;
+.smbContainer{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    right: 0;
+    z-index: 5;
+    margin-right: 3vw;
+    bottom:0;
+    width: 36px;
+    height: 300px;
+}
+
+.smbLine{
+    display: flex;
+    bottom:0;
+    margin: auto auto 0 auto;
+    padding: 0;
+    width: 2px;
+    height: 60px;
+    background-color: $darkBlue;
+}
+
+.smbInnerContainer{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    align-items: center;
+    margin: auto auto 0 auto;
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100% - 60px);
+    border-radius: 20px 3px 0 0;
+    background-color: $darkBlue;
+}
+
+.smbSvgWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+    width: 24px;
+    height: 36px;
+}
+
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width:$smallScreen){
+    .smbWrapper{
+        margin-right: 1vw;
+    }
+}
+
+
+
+@media only screen and (max-width:$tablet){
+    .smbWrapper{
+        display: none;
+    }
+}

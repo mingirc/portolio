@@ -1,0 +1,10 @@
+$largeScreen: 1400px;
+$smallScreen: 1280px;
+$tablet: 768px;
+$smallTablet: 650px;
+$mobile: 480px;
+$isMobile: true;
+
+:export{
+    isMobile: $isMobile;
+}

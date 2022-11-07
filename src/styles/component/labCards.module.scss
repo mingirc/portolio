@@ -1,0 +1,43 @@
+@use "../abstract/" as *;
+
+.labCards{
+    $cardGap:calc((59vw - 750px) / 4);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:4vh $cardGap;
+    padding: 0 $cardGap;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+@media only screen and (max-width:$smallScreen){
+    .labCards{
+        $cardGap:calc((73vw - 500px) / 3);
+        gap:4vh $cardGap;
+        padding: 0 $cardGap;
+    }
+}
+
+@media only screen and (max-width:$tablet){
+    .labCards{
+        $cardGap:calc((89vw - 500px) / 3);
+        gap:4vh $cardGap;
+        padding: 0 $cardGap;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .labCards{
+        $cardGap:calc((89vw - 250px) / 2);
+        gap:4vh $cardGap;
+        padding: 0 $cardGap;
+    }
+}
+
+@media only screen and (max-width:$mobile){
+    .labCards{
+        gap:4vh;
+    }
+}

@@ -1,0 +1,61 @@
+@use "../abstract/" as *;
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    box-shadow: 3px 3px 8px $darkGray;
+    margin:2%;
+    width: 100%;
+    padding: 5%;
+    background-color: $yellow-l3;
+}
+
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: $mainFont;
+    font-size: $f18;
+    width: 80%;
+    padding: 0;
+    margin: auto;
+    .formFooter{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .messageContainer{
+            display: flex;
+            justify-content: flex-start;
+            width: 60%;
+            font-size: $f14;
+            color: $red;
+            .formMessage{
+                display: none;
+            }
+        }
+
+        .buttonContainer{
+            display: flex;
+            justify-content: flex-end;
+            width: 60%;
+        }
+    }
+}
+
+.mobile{
+    width: 100%;
+}
+
+.recaptcha{
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    transform: scale(0.1);
+    height: 10px;
+    overflow: hidden;
+}

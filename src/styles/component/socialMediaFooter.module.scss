@@ -1,0 +1,46 @@
+@use "../abstract/" as *;
+
+.smfContainer{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+    background-color: $darkBlue;
+}
+
+.smfInnerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+}
+
+.smfSvgWrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 24px;
+    height: 36px;
+}
+
+
+.mobile{
+    display: flex;
+}
+
+@media only screen and (max-width:$tablet){
+    .smfContainer{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width:$mobile){
+    .smfInnerWrapper{
+        width: 70%;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

@@ -1,0 +1,64 @@
+@use 'fonts';
+@use 'colors';
+
+@mixin logo($logoVariable, $color, $title){
+   
+    .logoInnerWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        align-items:center;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+        .logoLayer1{
+            font-family: fonts.$stylishFont;
+            font-weight: 500;
+            font-size: calc(22.5 * $logoVariable);
+            position: relative;
+            overflow: visible;
+            z-index: 1;
+            color: colors.$darkGray;
+            opacity: 0.2;
+            padding-right: 0.25em;
+        }
+        
+        .logoLayer2{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 2;
+            margin: 0;
+            padding: 0;
+            
+            .logoLayer3{
+                font-family: fonts.$stylishFont;
+                font-weight: 500;
+                font-size: calc(4.5 * $logoVariable);
+                position: relative;
+                z-index: 3;
+                margin-top: calc(-3.8 * $logoVariable);
+                margin-left: 1em;
+                color: $color;
+                white-space: nowrap;
+            }
+            
+            .logoLayer4{
+                @if($title == 'true') {
+                    visibility: visible;
+                } @else{
+                    visibility: hidden;
+                }
+                font-family: fonts.$mainFont;
+                font-size: calc(1.1 * $logoVariable); 
+                position: relative;
+                z-index: 4;
+                margin-top: calc(0.8 * $logoVariable);
+                color: $color;
+            }
+        }
+    }
+}

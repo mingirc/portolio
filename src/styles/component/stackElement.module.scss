@@ -1,0 +1,39 @@
+@use "../abstract/pageBreakpoints" as *;
+
+.stackContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+
+    .stackInnerContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: bottom;
+        box-sizing: border-box;
+        padding: 0.3em 0;
+
+        .stackImg{
+            box-sizing: border-box;
+            margin: 0 0.3em 0 0;
+            padding: 0;
+            width: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width:$smallScreen){
+    .stackContainer{
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width:$mobile){
+    .stackContainer{
+        width: 50%;
+    }
+}

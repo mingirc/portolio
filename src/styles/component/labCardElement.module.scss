@@ -1,0 +1,97 @@
+@use "../abstract/" as *;
+
+$cardWidth:250px;
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    font-family: $mainFont;
+    box-shadow: none;
+    width: $cardWidth;
+    overflow: hidden;
+
+
+   .imageWrapper{
+        display: relative;
+        overflow: hidden;
+        background-color: $darkGray;
+        z-index: 3;
+        margin: 0;
+        padding: 0;
+        width: $cardWidth;
+        height: 380px;
+        img{
+            opacity: 1;
+        }    
+    }
+    
+    .descWrapper{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+        margin: -72px 0 0 0;
+        padding: 10px auto auto 10px;
+        width: $cardWidth;
+        height: 72px;
+        background-color: $lightGray;
+    
+        .captionWrapper{
+            display: flex;
+            width: 100%;
+            padding: 10px 0 0 0;
+            margin:0;
+            .arrow{
+                padding: 0;
+                margin: 0 0 0 10px;
+                width: 1.2rem;
+            }
+            h3{
+                padding: 0;
+                margin: 0 0 0 5px;
+            }
+        }
+    
+        span{
+            display: flex;
+            width: 100%;
+            padding: 0;
+            margin: 5px 0 0 10px;
+        }
+    }
+
+    &:hover{
+        box-shadow: 3px 3px 8px $darkGray;
+        .imageWrapper{
+            transform: translateY(-72px);
+            img{
+                opacity: 0.5;
+                transition: 200ms;
+            }
+            transition: 200ms;
+        }
+        transition: 600ms;
+    }
+}
+
+@media only screen and (max-width:$mobile){
+    .cardContainer{
+        box-shadow: 3px 3px 8px $darkGray;
+        .imageWrapper{
+            transform: translateY(-72px);
+        }
+        &:hover{
+            .imageWrapper{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

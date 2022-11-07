@@ -1,0 +1,36 @@
+[
+    {
+    "id":1,
+    "caption":"Project: My Personal Portfolio Website",
+    "description":"This is a commercial product for my clients who want to sell their products online and also includes a fully functional content management system with useful integrations like ShipStation and Stripe. Media is managed using Cloudinary. It also has a backend with AWS S3 Bucket, AWS Lightsail server, and PostgreSQL database. \nI can't share the GitHub repository because it's a commercial product. But you might want to watch the YouTube video to see how high-end and big the project is.",
+    "roles":"UI/UX Design, Front-End Dev.",
+    "links":[{
+        "name":"portfolioLink_github",
+        "to":"https://github.com/mingirc/portolio"
+    }],
+    "img":"../../assets/portfoliowebsite1.avif",
+    "fallbackimg":"../../assets/portfoliowebsite1.png",
+    "imgtype":"image/avif",
+    "alt":"Personal Portfolio Website Screenshot",
+    "stack":["html", "css", "sass","ts", "react", "aws"]
+    },
+    {
+    "id":2,
+    "caption":"Case Study: Store Manager App",
+    "description": "This app was developed with the aim of demonstrating \"React Skills\" deliberately by over-engineering.  You may find good examples of \"React High-Order Components (HOC)\" and also \"React Render Props\" examples in this case study. \n You can use this application as a cashier application to sell products. With product and category management, you can manage the products as desired. You can benefit from the inventory and the sales reports for following the current status. ",
+    "roles":"UI/UX Design, Front-End Dev.",
+    "links":[{
+        "name":"portfolioLink_github",
+        "to":"https://github.com/mingirc/storemanagerapp"
+    },
+    {
+        "name": "portfolioLink_externalLink",
+        "to" : "https://storemanagerapp.site"
+    }],
+    "img":"../../assets/storemanager1.avif",
+    "fallbackimg":"../../assets/storemanager1.png",
+    "imgtype":"image/avif",
+    "alt":"Store Manager Application Screenshot",
+    "stack":["html", "css", "js", "react", "redux", "aws", "materialui", "formik", "eslint" ]
+    }
+]

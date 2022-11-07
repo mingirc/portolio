@@ -1,0 +1,98 @@
+@use "../abstract" as *;
+
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 120px 0 0 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.light{
+    background-color: $white;
+}
+
+.dark{
+    background-color: $lightGray;
+}
+
+.pageContainer{
+    display: flex;
+    overflow: hidden;
+    width: 72vw;
+}
+
+.verticalCaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+}
+
+.horizontalCaption{
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.mainStream{
+    display: flex;
+    overflow: visible;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    width: 85%;
+}
+
+
+@mixin mobile{
+
+    .bodyContainer{
+        padding: 3rem 0 0 0;
+    }
+
+    .pageContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90vw;
+    }
+
+    .verticalCaption{
+        display: none;
+    }
+
+    .horizontalCaption{
+        display: block;
+        width: 100%;
+        padding: 36px 0 36px 0;
+        height: 100%;
+    }
+
+    .mainStream{
+        padding: 0;
+        overflow: visible;
+        width: 99%;
+    }
+}
+
+.mobile{
+    @include mobile();
+}
+
+
+@media only screen and (max-width:$smallScreen){
+    .pageContainer{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 90vw;
+    }
+
+}
+
+@media only screen and (max-width:$tablet){
+    @include mobile();
+}

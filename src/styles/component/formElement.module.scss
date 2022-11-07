@@ -1,0 +1,84 @@
+@use "../abstract/" as *;
+
+.formElement{
+    position: relative;
+    font-family: $mainFont;
+    color: $darkBlue;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+
+    .formInput{
+        position: relative;
+        font-family: $secondaryFont;
+        margin:0;
+        z-index: 2;
+        top:0;
+        left: 0;
+        width: 100%;
+        font-size: $f18;
+        padding: 1.2rem 1.25rem;
+        border: 2px solid $darkGray;
+        box-sizing: border-box;
+        border-radius: 0.3em;
+        outline: none;
+        background: none ;
+        color:inherit;
+    
+        &:hover{
+            border: 2px solid $darkBlue;
+            transition: 500ms ease-in;
+        }
+    
+        &:focus{
+            border: 2px solid $lightBlue;
+            transition: 200ms ease-in;
+        }
+    }
+    
+    .formLabel{
+        position: absolute;
+        z-index: 1;
+        font-size: $f16;
+        top:0.65rem;
+        left:1rem;
+        padding: 0 0.5rem;
+        color: $darkGray;
+        cursor: text;
+        transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200 ease-in;
+        background-color: $yellow-l3;
+    }
+        
+    .errorMessage{
+        font-family: $secondaryFont;
+        font-size: $f14;
+        color: $red;
+        margin-left: 1rem;
+        display: none;
+    }
+    
+}
+
+.formInput:focus ~ .formLabel, %focusedLabel{
+    color:$lightBlue;
+    font-size: 1rem;
+    top: -0.9rem;
+    left: 0.8rem;
+    transition: 200ms;
+    background-color: $yellow-l3;
+    z-index: 3;
+}
+
+.formInput:not(:placeholder-shown).formInput:not(:focus) ~ .formLabel{
+    @extend %focusedLabel;
+    color:$darkGray;
+}
+
+.formInput:not(:placeholder-shown).formInput:not(:focus):hover ~ .formLabel{
+    @extend %focusedLabel;
+    transition: 500ms ease-in;
+    color:$darkBlue;
+}

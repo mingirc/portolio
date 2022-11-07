@@ -1,0 +1,86 @@
+@use "../abstract/" as *;
+
+$darkTheme: true !default;
+
+%button-dark {
+    background-color: $darkBlue;
+    color: $lightGray;
+    box-shadow: 2px 2px 3px $darkButtonShadow;
+    &:hover{ 
+        color: $yellow;
+    }
+}
+
+%button-light {
+    background-color: $yellow;
+    color: $darkBlue;
+    box-shadow: 1px 1px 2px black;
+    &:hover{
+        color: $lightBlue
+    }
+}
+
+%button-big {
+    font-size: $f18;
+    height: 40px;
+    padding: 4px 20px;
+    border-radius: 3px 3px 20px 3px;
+ 
+    &:hover{
+        padding-top:0;
+        transition: 200ms;
+    }
+
+    &:disabled:hover{
+        padding-top:4px;
+    }
+}
+
+%button-small {
+    font-size: $f14;
+    height: 30px;
+    padding: 3px 12px;
+    border-radius: 2px 2px 12px 2px;
+    box-sizing: border-box;
+    &:hover{
+        padding-top:0;
+        transition: 200ms;
+    }
+    
+    &:disabled:hover{
+        padding-top:3px;
+    }
+}
+
+.button{
+    border: none;
+    margin: 0;
+    font-family: $mainFont;
+    cursor: pointer;
+    &-big {
+        @extend %button-dark;
+        @extend %button-big;
+    }
+    &-small {
+        @extend %button-dark;
+        @extend %button-small;
+    }
+
+    &-mobile {
+        margin-top: 1rem;
+        $darkTheme: false;
+        @extend %button-light;
+        @extend %button-small;
+    }
+
+    &:disabled{
+        color: $lightGray;
+        box-shadow: none;
+        background-color: $darkGray;
+    }
+    &:disabled:hover{
+        color: $lightGray;
+        box-shadow: none;
+        background-color: $darkGray;
+    }
+}

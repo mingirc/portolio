@@ -1,0 +1,49 @@
+@use "../abstract/" as *;
+
+.element{
+    display: inline;
+    margin: auto 0;
+    color: $darkBlue;
+    font-family: $mainFont;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        color: $lightBlue;
+    }
+    &Active{
+        cursor: default;
+        text-decoration: 1.5px solid underline;
+        text-underline-offset: 5px ;
+        &:hover{
+            color: $darkBlue;
+        }
+    }
+}
+
+.mobile{
+    display: inline;
+    margin: 0;
+    color: $lightGray;
+    font-family: $mainFont;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        color: $lightBlue;
+    }
+    &Active{
+        cursor: default;
+        text-decoration: 1.5px solid underline;
+        text-underline-offset: 5px ;
+        &:hover{
+            color: $lightGray;
+        }
+    }
+}
+
+@media only screen and (max-width:$mobile){
+    .element{
+        font-size: 2rem;
+    }
+}

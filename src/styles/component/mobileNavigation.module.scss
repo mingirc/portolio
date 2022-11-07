@@ -1,0 +1,96 @@
+@use "../abstract" as *;
+
+.mobileNavigationContainer{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    padding: 2rem 2rem 2rem 2rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: $darkBlue;
+    z-index: 9;
+    
+    .buttonContainer{
+        display: flex;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .mobileLogoContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 50%;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 5rem;
+
+        @include logo(1.5vw, $yellow, "false")
+    }
+    
+    .navigationGroupContainer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin: 2rem 0 8rem 0;
+        box-sizing: border-box;
+        overflow: visible;
+        height: 50%;
+        width: 99%;
+
+        .mobileContainer{
+            .mobileInnerContainer{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                box-sizing: border-box;
+                gap: 0.3rem;
+                margin: 0;
+                padding-top: 4rem 0;
+                height: 80%;
+                width: 40%;
+                .mobileSvgWrapper{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+                    width: 4rem;
+                    svg{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .navigationElements{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            height: 80%;
+            width: 60%;
+        }
+    }
+}
+
+.navToggle{
+    display: flex;
+}
+

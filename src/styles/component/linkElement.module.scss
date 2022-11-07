@@ -1,0 +1,15 @@
+.linkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem 0 0;
+    margin: 0;
+    gap: 10px;
+    .svgLinkWrapper{
+        display: flex;
+    }
+}

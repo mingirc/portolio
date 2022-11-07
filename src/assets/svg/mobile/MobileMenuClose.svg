@@ -1,0 +1,10 @@
+<svg id="MobileNavCloseButton" data-name="MobileNavCloseButton" xmlns="http://www.w3.org/2000/svg" width="29" height="24" viewBox="0 0 29 24">
+  <g id="Component_23_1" data-name="wrapper">
+    <g id="Rectangle_33" data-name="Rectangle" fill="none" stroke="#e6e6e6" strokeWidth="2">
+      <rect width="29" height="24" rx="3" stroke="none"/>
+      <rect x="1" y="1" width="27" height="22" rx="2" fill="none"/>
+    </g>
+  </g>
+  <line id="Line_7" data-name="Line 7" x2="18" transform="translate(8.136 5.636) rotate(45)" fill="none" stroke="#e6e6e6" strokeLinecap="round" strokeWidth="2"/>
+  <line id="Line_8" data-name="Line 8" x2="18" transform="translate(20.864 5.636) rotate(135)" fill="none" stroke="#e6e6e6" strokeLinecap="round" strokeWidth="2"/>
+</svg>

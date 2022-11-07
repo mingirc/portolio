@@ -1,0 +1,58 @@
+@use "../abstract" as *;
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    background-color: $lightGray;
+}
+
+.logoWrapper{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items:center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 60vw;
+    height: 100vh;
+    padding: 3% 3% 3% 0;
+    margin-left: -10vw;
+    z-index: 0;
+
+    @include logo(1vw, $darkBlue, 'true');
+
+}
+
+
+@media only screen and (max-width:$smallScreen){
+    
+    .logoWrapper{
+        justify-content: center;
+        width: 90vw;
+        @include logo(1.5vw, $darkBlue, 'true')
+    }
+    
+
+
+}
+
+@media only screen and (max-width:$tablet){
+    .logoWrapper{
+        justify-content: center;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:$smallTablet){
+    .logoWrapper{
+        justify-content: center;
+        width: 90%;
+    }
+}

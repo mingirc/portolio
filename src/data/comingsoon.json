@@ -1,0 +1,40 @@
+[
+    {
+    "id":0,
+    "caption":"Commercial Product: E-Commerce Website",
+    "description":"This is a commercial product for my clients that desire to sell their products online which also includes fully functional content management system with useful integrations like ShipStation and Stripe. The media is managing by using cloudinary. It also has a background with AWS S3 Bucket, AWS Lightsail server and PortgreSQL database. \n For the reason of this is a commercial product I could not share the github repo, but you may want to watch the YouTube video to understand how high-end and big the project is. ",
+    "roles":"UI/UX Design, Front-End/Back-End Dev.",
+    "links":[{
+        "name":"portfolioLink_youtube",
+        "to":""
+    },
+    {
+        "name": "portfolioLink_externalLink",
+        "to" : ""
+    }],
+    "img":"../../assets/ecommerce1.avif",
+    "fallbackimg":"../../assets/ecommerce1.png",
+    "imgtype":"image/avif",
+    "alt":"E-commerce Website Screenshot",
+    "stack":["html", "css", "ts", "angular", "aws", "python", "django", "postgresql", "cloudinary"]
+    },
+    {
+    "id":3,
+    "caption":"Case Study: Project Communication Portal",
+    "description": "Project management applications are mostly focusing on Gantt charts. But this project application is bringing a new perspective by focusing on to keep all correspondences in one place to provide an easy access for users as a better communication tool. In other words, you can say goodbye to all e-mails and miscommunication accidents/issues on your project. You can gather all necessary information and latest updates in one place with no effort.",
+    "roles":"UI/UX Design, Front-End/Back-End Dev.",
+    "links":[{
+        "name":"portfolioLink_github",
+        "to":""
+    },
+    {
+        "name": "portfolioLink_externalLink",
+        "to" : ""
+    }],
+    "img":"../../assets/projectmanager1.avif",
+    "fallbackimg":"../../assets/projectmanager1.png",
+    "imgtype":"image/avif",
+    "alt":"Project Manager Application Screenshot",
+    "stack":["html", "css", "ts", "Angular", "bootstrap", "dotnet", "mssql" ]
+    }
+]

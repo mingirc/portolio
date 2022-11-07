@@ -1,0 +1,107 @@
+@use "../abstract" as *;
+
+.navigationContainer{
+    display: flex;
+    position:fixed;
+    justify-content: center;
+    z-index:5;
+    top:0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: $lightGray;
+    height: 60px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 ;
+    padding: 0;
+    width: 72%;
+    height: 100%;
+}
+
+.navElementWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2vw;
+    width: 28rem;
+    padding: 0;
+    margin: auto 0;
+}
+
+.logoWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: auto 0;
+    width: 14rem;
+    height: 40px;
+    padding: 0;
+
+    .topNavigationLogo{
+        opacity: 0;
+    }
+}
+
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width:$smallScreen){
+    .navigation{
+        width: 90vw;
+    } 
+    .navElementWrapper{
+        gap: 3vw;
+    }
+    .logoWrapper{
+        width: 12rem;
+    }
+}
+
+@media only screen and (max-width:$tablet){
+    .navigation{
+        justify-content: center;
+        width: 90%;
+    } 
+
+    .navElementWrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 3vw;
+        width: 90vw;
+        padding: 0;
+        margin: auto 0;
+    }
+
+    .logoWrapper{
+        width: 10rem;
+    }
+}
+
+@media only screen and (max-width:$smallTablet){
+    .navigation{
+        justify-content: center;
+        width: 90vw;
+    } 
+
+    .navElementWrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3vw;
+        width: 90vw;
+        padding: 0;
+        margin: auto 0;
+    }
+
+    .logoWrapper{
+        display: none;
+    }
+}

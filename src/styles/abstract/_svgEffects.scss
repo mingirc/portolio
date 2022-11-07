@@ -1,0 +1,97 @@
+@use "./colors" as *;
+
+.svgGrayToYellow-text{
+    cursor: pointer;
+    text{
+        fill: $lightGray;
+    }   
+
+    &:hover{
+        text{
+            fill:$yellow;
+        }
+    }
+}
+
+
+.svgGrayToYellow-fill{
+    cursor: pointer;
+    margin:auto; 
+    padding: 6px 0;
+    width: 24px;
+    path{
+        fill: $lightGray;
+    }
+
+    &:hover{    
+        transform: translateY(-5px);
+        transition: 300ms;          
+        path{
+            fill: $yellow;
+        }
+    }
+}
+
+.svgDarkBlueToLightBlue-fill{
+    cursor: pointer;
+    margin:auto; 
+    padding: 6px 0;
+    width: 24px;
+    path{
+        fill: $darkBlue;
+    }
+
+    &:hover{    
+        path{
+            fill: $lightBlue;
+        }
+    }
+}
+
+.svgGrayToYellow-stroke{
+    cursor: pointer;  
+    margin:auto; 
+    padding: 6px 0;
+    width: 24px;                
+    g{
+        path{
+            stroke: $lightGray;
+        }
+    }
+    
+    &:hover{
+        transform: translateY(-5px);
+        transition: 300ms;
+        g{
+            path{
+                stroke: $yellow;
+            }
+        }
+    }
+}
+
+.svgDarkBlueToLightBlue-stroke{
+    cursor: pointer;  
+    margin:auto; 
+    padding: 6px 0;
+    width: 24px;                
+    g{
+        path{
+            stroke: $darkBlue;
+        }
+    }
+    path{
+        stroke: $darkBlue;
+    }
+    
+    &:hover{
+        g{
+            path{
+                stroke: $lightBlue;
+            }
+        }
+        path{
+            stroke: $lightBlue;
+        }
+    }
+}

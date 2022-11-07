@@ -1,0 +1,201 @@
+@use "../abstract/" as *;
+
+.pcContainer, %pcContainer{
+    display: grid;
+    font-family: $mainFont;
+    font-size: $f20;
+    width: 100%;
+    height: min-content;
+    margin: 0 0 5em 0;
+    gap: 0.7em;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "pcCaption pcImage" 
+    "pcDesc pcImage" 
+    "pcLinks pcImage" 
+    "pcStack pcStack";
+}
+
+.pcContainerReverse{
+    @extend %pcContainer;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: 
+    "pcImage pcCaption" 
+    "pcImage pcDesc" 
+    "pcImage pcLinks" 
+    "pcStack pcStack";
+}
+
+%shadow{
+    box-shadow: 3px 3px 8px $darkGray;
+}
+    
+.pcCaption{
+    @extend %shadow;
+    grid-area: pcCaption;
+    background-color: $darkBlue;
+    color: $lightGray;
+    height: 2.5rem;
+    font-size: $f16;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1rem;
+}
+
+.pcDesc{
+    @extend %shadow;
+    grid-area: pcDesc;
+    background-color: $yellow-l1;
+    font-family: $secondaryFont;
+    font-size: $f14;
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: $darkBlue;
+    text-align: justify;
+    box-sizing: border-box;
+    height: 13rem;
+    scrollbar-width: thin;
+    line-height: 1.4rem;
+}
+
+.pcFooter{
+    @extend %shadow;
+    grid-area: pcLinks;
+    background-color: $yellow-l2;
+    display: flex;
+    align-items: center;
+    min-height: 2em;
+    padding: 0.25rem 1rem;
+
+    .pcRoles{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80%;
+        padding-right: 0.385rem;
+        font-size: $f14;
+        color:$darkBlue;
+
+        .rolesCaption{
+            text-decoration: underline;
+            margin-right: 5px;
+        }
+    }
+
+    .pcLinks{
+        width: 20%;
+    }
+}
+
+
+.pcImageContainer{
+    @extend %shadow;
+    grid-area: pcImage;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGray;
+    height: 17em;
+    width: 100%;
+    overflow: visible;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+
+    .pcImage{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: transparent;
+        outline: 4px solid $darkGray; 
+        outline-offset: -10px;
+        .portfolioCardPicture{
+            display: block;
+            height: 96%;
+            width: 96%;
+            box-sizing: border-box;
+            margin: 0;
+            background-color: transparent;
+
+            .portfolioCardImg{
+                display: block;
+                height: 100%;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+                background-color: transparent;
+            }
+        }
+
+    
+    }
+    
+    .pcImageFilter{
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: $yellow-l2;
+        opacity: 0.5;
+    
+        &:hover{
+            opacity: 0;
+            transition: 500ms ease-in;
+        }
+    }
+
+}
+
+
+
+.pcStack{
+    @extend %shadow;
+    grid-area: pcStack;
+    display: flex;
+    flex-direction: row;
+    background-color: $yellow-l3;
+    padding: 0.6rem 1rem;
+    font-size: $f16;
+    color: $darkBlue;
+    box-sizing:"border-box";
+    overflow: hidden;
+    flex-wrap: wrap;
+    height: min-content;
+
+}
+
+@mixin mobile{
+    display: grid;
+    height: min-content;
+    width: 100%;
+    gap: 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "pcCaption" 
+    "pcImage"
+    "pcDesc" 
+    "pcLinks" 
+    "pcStack";
+}
+
+.mobile{
+    @include mobile();
+}
+
+
+@media only screen and (max-width: $tablet) {
+    .pcContainer{
+        @include mobile();
+    }
+
+}
