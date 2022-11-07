@@ -19,8 +19,8 @@ const MobileNavigationButton:React.FC<Props> = ({toggle, setToggle}:Props) => {
 
     
     return (
-        <div className={`${styles.mobileNavButton} ${mobile && styles.mobile} ${toggle && styles.toggle}`} onClick={clickHandler}>
-            {toggle ? <MobileNavCloseButton /> : <MobileNavButton />}
+        <div className={`${styles.mobileNavButton} ${mobile && styles.mobile}`} onClick={clickHandler}>
+            {toggle ? <MobileNavCloseButton className={styles.buttonClose} /> : <MobileNavButton className={styles.buttonMenu} />}
         </div>  
     )
 }

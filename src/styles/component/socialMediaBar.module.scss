@@ -49,7 +49,7 @@
 }
 
 @media only screen and (max-width:$smallScreen){
-    .smbWrapper{
+    .smbContainer{
         margin-right: 1vw;
     }
 }
@@ -57,7 +57,7 @@
 
 
 @media only screen and (max-width:$tablet){
-    .smbWrapper{
+    .smbContainer{
         display: none;
     }
 }

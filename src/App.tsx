@@ -39,17 +39,9 @@ const App:React.FC = () => {
         {/* <Lab /> */}
         <Contact />
         <Suspense>
-          {mobile ?
-            <>
-              <MobileNavigation />
-              <SocialMediaFooter />
-            </>
-            :
-            <>
-              <Navigation />
-              <SocialMediaBar />
-            </>
-          }
+        {mobile ? <MobileNavigation /> : <Navigation />}
+        <SocialMediaBar />
+        <SocialMediaFooter />
         </Suspense>
         <Footer /> 
     </>

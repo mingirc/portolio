@@ -1,15 +1,25 @@
 @use "../abstract/" as *;
 
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 .contactContainer{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: top;
     box-shadow: 3px 3px 8px $darkGray;
-    margin:2%;
-    width: 100%;
+    margin: 2%;
+    width: 96%;
     padding: 5%;
     background-color: $yellow-l3;
+    box-sizing: border-box;
+    overflow: visible;
 }
 
 .formWrapper{
@@ -22,6 +32,8 @@
     width: 80%;
     padding: 0;
     margin: auto;
+    box-sizing: border-box;
+
     .formFooter{
         display: flex;
         width: 100%;

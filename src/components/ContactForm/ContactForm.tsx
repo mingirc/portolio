@@ -81,20 +81,24 @@ const ContactForm:React.FC = () => {
     }   
 
     return(
-        <div className={styles.contactContainer}>
-            <form ref={formEl} onSubmit={onSubmit} className={`${styles.formWrapper} ${mobile && styles.mobile}`}>
-                {inputArr(inputs)}
-                <div className={styles.formFooter}>
-                    <div className={styles.messageContainer}>
-                        <span className={styles.formMessage} id="formMessage" ref={messageEl}>Your message has been sent.</span> 
+        <div className={styles.container}>
+            <ReCAPTCHA ref={reRef} sitekey={process.env.REACT_APP_RECAPTCHA_KEY!} size="invisible" badge="inline" className={styles.recaptcha} />
+            <div className={styles.contactContainer}>
+                <form ref={formEl} onSubmit={onSubmit} className={`${styles.formWrapper} ${mobile && styles.mobile}`}>
+                    {inputArr(inputs)}
+                    <div className={styles.formFooter}>
+                        <div className={styles.messageContainer}>
+                            <span className={styles.formMessage} id="formMessage" ref={messageEl}>Your message has been sent.</span> 
+                        </div>
+
+                        <div className={styles.buttonContainer}>
+                            <Button type="submit" buttonLabel={buttonValues.label} buttonType="button button-big" disabled={buttonValues.disabled} /> 
+                        </div>
                     </div>
-                    <ReCAPTCHA ref={reRef} sitekey={process.env.REACT_APP_RECAPTCHA_KEY!} size="invisible" badge="inline" className={styles.recaptcha} />
-                    <div className={styles.buttonContainer}>
-                        <Button type="submit" buttonLabel={buttonValues.label} buttonType="button button-big" disabled={buttonValues.disabled} /> 
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
+
     )
 }
 
